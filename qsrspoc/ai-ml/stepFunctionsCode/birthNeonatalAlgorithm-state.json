@@ -6,7 +6,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:assignVarsStepFunction:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:assignVarsStepFunction:$LATEST",
         "Payload": "{% $states.input %}"
       },
       "Next": "Extract Data Pass",
@@ -63,7 +63,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.EQR2 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -109,7 +109,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.EQ1 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -155,7 +155,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q1 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -198,7 +198,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q2 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -259,7 +259,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q3 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -358,7 +358,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q5 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -425,7 +425,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q11 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -464,7 +464,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q12 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -510,7 +510,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q6 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -546,7 +546,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q7 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -582,7 +582,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q8 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -618,7 +618,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q9 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -670,7 +670,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q10 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -711,7 +711,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:answerQuestion:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:answerQuestion:$LATEST",
         "Payload": {
           "prompt": "{% $prompts.Q4 %}",
           "all_page_text_file": "{% $all_page_text_file %}",
@@ -771,7 +771,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Arguments": {
-        "FunctionName": "arn:aws:lambda:us-east-1:864981749938:function:collectAndUpload:$LATEST",
+        "FunctionName": "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:collectAndUpload:$LATEST",
         "Payload": {
           "APGAR_5": "{% $APGAR_5 %}",
           "BN_Event": "{% $BN_Event %}",

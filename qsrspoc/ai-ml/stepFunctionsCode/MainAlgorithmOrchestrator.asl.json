@@ -13,7 +13,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::states:startExecution.sync:2",
       "Arguments": {
-        "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:administrativeAlgorithm-state",
+        "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:administrativeAlgorithm-state",
         "Input": {
           "algorithm": "Administrative",
           "Records": "{% $Records %}"
@@ -25,7 +25,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::states:startExecution.sync:2",
       "Arguments": {
-        "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:genericAlgorithm-state",
+        "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:genericAlgorithm-state",
         "Input": {
           "algorithm": "Generic",
           "Records": "{% $Records %}"
@@ -43,7 +43,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:covidAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:covidAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-COVID-19",
                   "Records": "{% $Records %}"
@@ -60,7 +60,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:haiHAPAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:haiHAPAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-HAP",
                   "Records": "{% $Records %}"
@@ -77,7 +77,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:haiCDIAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:haiCDIAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-CDI",
                   "Records": "{% $Records %}"
@@ -94,7 +94,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:haiCLABSIAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:haiCLABSIAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-CLABSI",
                   "Records": "{% $Records %}"
@@ -111,7 +111,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:haiSSIAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:haiSSIAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-SSI",
                   "Records": "{% $Records %}"
@@ -128,7 +128,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:fallAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:fallAlgorithm-state",
                 "Input": {
                   "algorithm": "Fall",
                   "Records": "{% $Records %}"
@@ -145,7 +145,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:OOOIPart1Algorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:OOOIPart1Algorithm-state",
                 "Input": {
                   "algorithm": "OOOI-Part1",
                   "Records": "{% $Records %}"
@@ -157,7 +157,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:OOOIPart2Algorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:OOOIPart2Algorithm-state",
                 "Input": {
                   "algorithm": "OOOI-Part2",
                   "Records": "{% $Records %}"
@@ -169,7 +169,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:OOOIPart3Algorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:OOOIPart3Algorithm-state",
                 "Input": {
                   "algorithm": "OOOI-Part3",
                   "Records": "{% $Records %}"
@@ -186,7 +186,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:VTEAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:VTEAlgorithm-state",
                 "Input": {
                   "algorithm": "VTE",
                   "Records": "{% $Records %}"
@@ -203,7 +203,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:birthMaternalAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:birthMaternalAlgorithm-state",
                 "Input": {
                   "algorithm": "Birth-Maternal",
                   "Records": "{% $Records %}"
@@ -220,7 +220,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:bloodAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:bloodAlgorithm-state",
                 "Input": {
                   "algorithm": "Blood",
                   "Records": "{% $Records %}"
@@ -232,7 +232,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:medicationHeparinAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:medicationHeparinAlgorithm-state",
                 "Input": {
                   "algorithm": "Medication-Heparin",
                   "Records": "{% $Records %}"
@@ -244,7 +244,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:medicationHypoglycemicAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:medicationHypoglycemicAlgorithm-state",
                 "Input": {
                   "algorithm": "Medication-Hypoglycemic",
                   "Records": "{% $Records %}"
@@ -256,7 +256,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:medicationOpioidPart1Algorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:medicationOpioidPart1Algorithm-state",
                 "Input": {
                   "algorithm": "Medication-Opioid-Part1",
                   "Records": "{% $Records %}"
@@ -268,7 +268,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:medicationOpioidPart2Algorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:medicationOpioidPart2Algorithm-state",
                 "Input": {
                   "algorithm": "Medication-Opioid-Part2",
                   "Records": "{% $Records %}"
@@ -280,7 +280,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:medicationAnaphylaxisOverdoseAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:medicationAnaphylaxisOverdoseAlgorithm-state",
                 "Input": {
                   "algorithm": "Medication-Anaphylaxis-Overdose",
                   "Records": "{% $Records %}"
@@ -292,7 +292,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:medicationWarfarinAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:medicationWarfarinAlgorithm-state",
                 "Input": {
                   "algorithm": "Medication-Warfarin",
                   "Records": "{% $Records %}"
@@ -304,7 +304,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:medicationLMWHAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:medicationLMWHAlgorithm-state",
                 "Input": {
                   "algorithm": "Medication-LMWH",
                   "Records": "{% $Records %}"
@@ -321,7 +321,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:deviceAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:deviceAlgorithm-state",
                 "Input": {
                   "algorithm": "Device",
                   "Records": "{% $Records %}"
@@ -338,7 +338,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:haiUTIAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:haiUTIAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-UTI",
                   "Records": "{% $Records %}"
@@ -350,7 +350,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:haiCAUTIAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:haiCAUTIAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-CAUTI",
                   "Records": "{% $Records %}"
@@ -367,7 +367,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:haiOtherAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:haiOtherAlgorithm-state",
                 "Input": {
                   "algorithm": "HAI-Other",
                   "Records": "{% $Records %}"
@@ -384,7 +384,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:pressureInjuryAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:pressureInjuryAlgorithm-state",
                 "Input": {
                   "algorithm": "Pressure Injury",
                   "Records": "{% $Records %}"
@@ -401,7 +401,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:surgeryAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:surgeryAlgorithm-state",
                 "Input": {
                   "algorithm": "Surgery",
                   "Records": "{% $Records %}"
@@ -418,7 +418,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::states:startExecution.sync:2",
               "Arguments": {
-                "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:birthNeonatalAlgorithm-state",
+                "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:birthNeonatalAlgorithm-state",
                 "Input": {
                   "algorithm": "Birth-Neonatal",
                   "Records": "{% $Records %}"
@@ -436,7 +436,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::states:startExecution.sync:2",
       "Arguments": {
-        "StateMachineArn": "arn:aws:states:us-east-1:864981749938:stateMachine:exitAlgorithm-state",
+        "StateMachineArn": "arn:aws:states:<<AWS Region>>:<<AWS AccountID>>:stateMachine:exitAlgorithm-state",
         "Input": {
           "algorithm": "Exit",
           "Records": "{% $Records %}"
