@@ -23,7 +23,7 @@ resource "aws_lambda_function" "qsrs-ocr-s3process-uploaded-documents" {
     variables = {
       ocr_configpath = "config/ocr/config.json",
       rolearn = "arn:aws:iam::302263058686:role/textract_execution_role"
-      snstopicarn = "arn:aws:sns:us-east-1:302263058686:textract-jobcompletion-notification"
+      snstopicarn = "arn:aws:sns:<<AWS Region>>:<<AWS AccountID>>:textract-jobcompletion-notification"
     }
   }
 
@@ -34,7 +34,7 @@ resource "aws_lambda_function" "qsrs-ocr-s3process-uploaded-documents" {
 resource "aws_s3_bucket_notification" "s3process-uploaded-documents_notification" {
   bucket = "qrsr-ocr-poc-dev"
   lambda_function {
-    lambda_function_arn = "arn:aws:lambda:us-east-1:302263058686:function:qsrs-ocr-s3process-uploaded-documents"
+    lambda_function_arn = "arn:aws:lambda:<<AWS Region>>:<<AWS AccountID>>:function:qsrs-ocr-s3process-uploaded-documents"
     events              = ["s3:ObjectCreated:*"]
     filter_prefix       = "landing/"  # Optional, triggers for specific folder
   }
@@ -75,7 +75,7 @@ resource "aws_sns_topic" "textract-jobcompletion-notification" {
         "SNS:AddPermission",
         "SNS:Subscribe"
       ],
-      "Resource": "arn:aws:sns:us-east-1:302263058686:textract-jobcompletion-notification",
+      "Resource": "arn:aws:sns:<<AWS Region>>:<<AWS AccountID>>:textract-jobcompletion-notification",
       "Condition": {
         "StringEquals": {
           "AWS:SourceOwner": "302263058686"
@@ -101,7 +101,7 @@ delivery_policy = jsonencode({
     }
   }
 })
-  kms_master_key_id = "arn:aws:kms:us-east-1:302263058686:key/1dcb205b-5fde-4def-865a-750f169b60dc"
+  kms_master_key_id = "arn:aws:kms:<<AWS Region>>:<<AWS AccountID>>:key/1dcb205b-5fde-4def-865a-750f169b60dc"
   fifo_topic = false
   content_based_deduplication = true
 
@@ -171,7 +171,7 @@ resource "aws_lambda_function" "qsrs-ocr-extraction-process-completion" {
   environment {
     variables = {
       ocr_configpath = "config/ocr/config.json",
-      snstopicarn = "arn:aws:sns:us-east-1:302263058686:ocr-process-completion-notification"
+      snstopicarn = "arn:aws:sns:<<AWS Region>>:<<AWS AccountID>>:ocr-process-completion-notification"
     }
   }
 
@@ -213,7 +213,7 @@ resource "aws_sns_topic" "ocr-process-completion-notification" {
         "SNS:AddPermission",
         "SNS:Subscribe"
       ],
-      "Resource": "arn:aws:sns:us-east-1:302263058686:ocr-process-completion-notification",
+      "Resource": "arn:aws:sns:<<AWS Region>>:<<AWS AccountID>>:ocr-process-completion-notification",
       "Condition": {
         "StringEquals": {
           "AWS:SourceOwner": "302263058686"
@@ -239,7 +239,7 @@ delivery_policy = jsonencode({
     }
   }
 })
-  kms_master_key_id = "arn:aws:kms:us-east-1:302263058686:key/1dcb205b-5fde-4def-865a-750f169b60dc"
+  kms_master_key_id = "arn:aws:kms:<<AWS Region>>:<<AWS AccountID>>:key/1dcb205b-5fde-4def-865a-750f169b60dc"
   fifo_topic = false
   content_based_deduplication = true
 
@@ -311,7 +311,7 @@ resource "aws_lambda_function" "qsrs-ocr-extraction-process-completion" {
   environment {
     variables = {
       ocr_configpath = "config/ocr/config.json",
-      snstopicarn = "arn:aws:sns:us-east-1:302263058686:ocr-process-completion-notification"
+      snstopicarn = "arn:aws:sns:<<AWS Region>>:<<AWS AccountID>>:ocr-process-completion-notification"
     }
   }
 
