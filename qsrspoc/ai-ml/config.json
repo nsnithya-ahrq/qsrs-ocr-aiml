@@ -6,11 +6,11 @@
 
     "keep-key-value-text": false,
     "aws-region": "us-east-1", 
-    "sagemaker-endpoint": "biobert-model-endpoint-custom-v5",
-    "bucket": "ahrq-qsrs-ml-poc",
+    "sagemaker-endpoint": "DemoModel-2025-03-03-15-07-29-816",
+    "bucket": "qsrs-ocr-poc-dev",
     "default-file": "4928968_Redacted_cleaned.json",
     "default-algorithm": "HAI-UTI",
-    "main-algorithm-orchestrator-SF-arn": "arn:aws:states:us-east-1:864981749938:stateMachine:MainAlgorithmOrchestrator",
+    "main-algorithm-orchestrator-SF-arn": "arn:aws:states:<<AWS RegionId>>:<<AWS AccountId>>:stateMachine:MainAlgorithmOrchestrator",
 
     "structured-extension": "structured.txt",
     "cleaned-extension": "cleaned.json",
@@ -24,12 +24,23 @@
 
     "embeddings_send_to_batch": "1",
 
-    "batch_methodname": "process_file_embeddings_job",
-    "batch_jobname": "qsrs-ocr-job-pe-ec2-awsbatch-job",
-    "batch_jobqueue": "qsrs-ocr-job-pe-ec2-queue-awsbatch",
-    "batch_jobdefinition": "qsrs-ocr-jobdefinition-pe-ec2-awsbatch",
+    "batch_methodname_fargate_backup": "process_file_embeddings_job",
+    "batch_jobname_fargate_backup": "qsrs-ocr-pe-awsbatch-job",
+    "batch_jobqueue_fargate_backup": "qsrs-ocr-job-pe-queue-awsbatch",
+    "batch_jobdefinition_fargate_backup": "qsrs-ocr-jobdefinition-pe-awsbatch",
+    "batch_language_fargate_backup": "python",
+    "batch_pythoncodefile_fargate_backup": "awsbatch_page_embeddings_job.py",
+
+    "batch_methodname_ec2_backup": "process_file_embeddings_job",
+    "batch_jobname_ec2_backup": "qsrs-ocr-pe-ec2-awsbatch-job",
+    "batch_jobqueue_ec2_backup": "qsrs-ocr-job-pe-ec2-queue-awsbatch",
+    "batch_jobdefinition_ec2_backup": "qsrs-ocr-jobdefinition-pe-ec2-awsbatch",
     "batch_language": "python",
-    "batch_pythoncodefile": "awsbatch_page_embeddings_job.py",
+    "batch_pythoncodefile": "awsbatch_page_embeddings_job.py",  	
+    "batch_methodname": "process_file_embeddings_job",
+    "batch_jobname": "qsrs-ocr-pe-ec2-awsbatch-job_test",
+    "batch_jobqueue": "qsrs-ocr-job-pe-ec2-queue-awsbatch_test",
+    "batch_jobdefinition": "qsrs-ocr-jobdefinition-pe-ec2-awsbatch_test",
 
     "administrativeAlgorithmQuestions": {
         "Race-word-replace": "{race-list}",
